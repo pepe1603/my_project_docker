@@ -1,0 +1,195 @@
+@import './base.css';
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+.app-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.sticky-header{
+  height: 65px;
+  min-height: 55px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: var(--transparentLight);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  transition: box-shadow .4s ease;
+  transition: backdrop-filter 0.3s ease; /* Agregar transición para suavizar el efecto */
+  backdrop-filter: blur(10px); /* Aplicar efecto de difuminado */
+  
+}
+
+.sticky-header:hover{
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra en la parte inferior */
+}
+
+
+
+.content-main{
+  flex: 1;
+  width: 100%;
+  min-height: 100vh;
+  /*background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 15%);*/
+  
+}
+
+.fixed-footer{
+  min-height: 120px;
+  width: 100%;
+  position: static;
+  bottom: 0;
+  background-color: var(--cDark);
+  color: var(--cLight);
+  padding: 1rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+}
+.fixed-footer:hover h1{
+  text-shadow: 0px 4px 6px rgba(255, 255, 255, 0.7); /* Agregar sombra en la parte inferior */
+}
+
+.box-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;/* box-shadow: 1px 1px 2px #2424;*/
+  border-radius: 5px;
+  padding: 1.5em 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  body{
+    font-size: 15px;
+  }
+  .sticky-header {
+    height: 55px; /* Reducimos la altura del encabezado para dispositivos móviles */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Agregar sombra en la parte inferior */
+  }
+  #btn-bars{
+    display: block;
+  }
+  .nav-menu .links{
+    display: none;
+  }
+  .nav-menu .dropdown-links{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--cDark);
+    backdrop-filter: blur(35px);
+    display: none; /*Ocultamos el menu desplegable or defecto*/
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    padding-top: 3.74rem;
+
+    transition: display 1.7s ease-in-out;
+  }
+.nav-menu .dropdown-links.show{
+  display: flex;  /*Mostra el menu desplegablecuando se palique la clase 'show'*/
+}
+
+  .nav-menu .dropdown-links .links-dropdown{
+    margin-top: 4.78em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.3em;
+
+  }
+  #btn-xmark{
+    color: var(--cLight);
+    font-size: 1.5em;
+  }
+  #btn-xmark:hover{
+    transform: scale(1.7);
+    
+  }
+  .dropdown-links .links-dropdown li a{
+    color: var(--cLight);
+    letter-spacing: 1px;
+    padding: 5px 15px;  
+    border-radius: 10px;
+  }
+
+  .links-dropdown li.activete a{
+    color: var(--cLight);
+    background-color: var(--cLink);
+    transform: scale(1.2);
+  }
+
+  .title{
+    font-size: 14px;
+  }
+  .box-container .lista-contactos{
+    width: 100%;
+  }
+  .modal_container{
+    max-width: 300px;
+  }
+  .btn-cerrar{
+    font-weight: bold;
+
+  }
+
+  /*- estulos aporta home*/
+  .description p{
+    max-width: 250px;
+  }
+
+  .about-container{
+    font-size: 15px;
+  }
+  .about-container h1{
+    font-size: 1.5rem;
+  }
+
+  .footer-container{
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+
+}
+
+/* Estilos para laptops o escritorios */
+@media only screen and (min-width: 769px) {
+  .sticky-header {
+    height: 65px; /* Ajustamos la altura del encabezado para laptops o escritorios */
+  }
+
+  .content-main {
+    padding: 1.38rem 0rem; /* Aumentamos el relleno del área de contenido principal */
+  }
+  #btn-bars{
+    display: none;
+  }
+
+  .registro-contacto form{
+    width: 550px;
+  }
+
+  .lista-contactos{
+    margin: 0 auto;
+  }
+}

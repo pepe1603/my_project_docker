@@ -1,0 +1,38 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;700&display=swap');
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+*{
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:root {
+  /*----> Colors*/
+  --cPurple: #bf6fed;
+  --cPurple-dark: #9a67ea;
+  --cLink: #646cff;
+  --cInfo: #007bff;
+  --cLight:#fafafd;
+  --cDark: #000115;
+  --cPink: #ff00cc;
+  --success: #20c933;
+  --error:  #ec213b;
+  --smoke: #fcfcfcda;
+  --transparentDark: rgba(0,0,0,.4);
+  --transparentLight: rgba(255,255,255,.4);
+  }
+
+body{
+  min-height: 100vh;
+  width: 100%;
+  font-size: 18px;
+  background-color: var(--smoke);
+  font-family: "Open Sans", sans-serif;
+
+}
