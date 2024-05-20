@@ -1,7 +1,5 @@
+``` Estructura del Proyecto ```
 ### my_project_docker ###
-Estructura del Proyecto
-plaintext
-Copiar código
 my_project_docker/
 ├── README.md
 ├── app-mi-agenda
@@ -87,7 +85,7 @@ networks:
 
 ### Estructura de los Directorios ###
 
-*** app-mi-agenda: Contiene la aplicación frontend desarrollada con Vite. ***
+``` app-mi-agenda: Contiene la aplicación frontend desarrollada con Vite. ````
 
 -> Dockerfile: Archivo Docker para construir la imagen de la aplicación frontend.
 -> README.md: Documentación específica de la aplicación frontend.
@@ -101,12 +99,12 @@ networks:
 -> vite.config.js: Archivo de configuración de Vite.
 
 
-*** db: Contiene archivos SQL para la base de datos. ***
+```` db: Contiene archivos SQL para la base de datos. ````
 
 -> backup.sql: Archivo SQL para inicializar la base de datos.
 -> init.sql: Archivo SQL de respaldo.
 
-*** demoApiAgenda: Contiene la aplicación backend desarrollada con Spring Boot. ***
+```` demoApiAgenda: Contiene la aplicación backend desarrollada con Spring Boot. ````
 
 -> Dockerfile: Archivo Docker para construir la imagen de la API backend.
 -> HELP.md: Archivo de ayuda.(no creado)
@@ -115,12 +113,12 @@ networks:
 -> src: Código fuente de la aplicación backend.
 -> target: Archivos compilados de la aplicación.
 
-*** Archivo docker-compose ***
+```` Archivo docker-compose ````
 
 init.sql: Archivo SQL de respaldo.
 -> docker-compose.yml: Archivo de configuración para Docker Compose.
 
-*** docs: Contiene documentación del proyecto. (puedes ignorarlo) ***
+```` docs: Contiene documentación del proyecto. (puedes ignorarlo) ````
 
 -> Instalacion-Docker-&-Implementacion-ServiceFullStack-Agenda-With-Docker.docx: Documento de instalación y guía de implementación.
 -> snap_code: Ejemplos de código y capturas de pantalla.
@@ -140,13 +138,7 @@ SPRING_DATASOURCE_PASSWORD=tu_contraseña
 
 
 ### Contribuciones ###
-Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
-
-Haz un fork del repositorio.
-Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
-Realiza los cambios necesarios y haz commit (git commit -m 'Agrega nueva funcionalidad').
-Sube tus cambios (git push origin feature/nueva-funcionalidad).
-Crea un Pull Request.
+Si deseas contribuir a este proyecto puedes mejorarlo a tu gusto , esto fue realizado con fines educativos
 
 
 ### Licencia ###
